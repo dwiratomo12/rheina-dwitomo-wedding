@@ -1,14 +1,19 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { WEDDING_DATA } from "@/lib/constants";
 
-export default function Cover({
+function CoverContent({
   onOpen,
   isOpen,
 }: {
   onOpen: () => void;
   isOpen: boolean;
 }) {
+  const searchParams = useSearchParams();
+  const guestName = searchParams.get("to") || "Bapak/Ibu/Saudara/i";
+
   if (isOpen) return null;
 
   return (
@@ -45,7 +50,7 @@ export default function Cover({
 
         <p className="text-gray-500 text-sm mb-2 font-sans">Kepada Yth,</p>
         <p className="text-gray-700 font-medium mb-8 font-sans">
-          Bapak/Ibu/Saudara/i
+          {guestName}
         </p>
 
         <button
@@ -59,5 +64,16 @@ export default function Cover({
       {/* Decorative bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gold-100/50 to-transparent" />
     </div>
+  );
+}
+
+export default function Cover(props: {
+  onOpen: () => void;
+  isOpen: boolean;
+}) {
+  return (
+    <Suspense fallback={null}>
+      <CoverContent {...props} />
+    </Suspense>
   );
 }

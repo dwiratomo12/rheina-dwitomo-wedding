@@ -8,7 +8,7 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const target = new Date("2026-08-01T09:00:00+07:00").getTime();
+    const target = new Date("2027-10-09T09:00:00+07:00").getTime();
     const tick = () => {
       const now = Date.now();
       const diff = Math.max(0, target - now);

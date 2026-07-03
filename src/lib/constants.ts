@@ -88,19 +88,19 @@ export const WEDDING_DATA = {
   event: {
     akad: {
       title: "Akad Nikah",
-      date: "2026-08-01",
+      date: "2027-10-09",
       time: "09:00 - 11:00 WIB",
-      venue: "Masjid Raya Al-Jabbar",
-      address: "Jl. Cimincrang No.14, Cimenerang, Kec. Gedebage, Kota Bandung, Jawa Barat 40292",
-      mapsUrl: "https://maps.google.com/?q=Masjid+Raya+Al+Jabbar+Bandung",
+      venue: "Auditorium Sabang, Kantor Pusat Bea Cukai",
+      address: "Jl. Jenderal Ahmad Yani By Pass, RT.12/RW.5, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13230",
+      mapsUrl: "https://maps.google.com/?q=Auditorium+Sabang+Kantor+Pusat+Bea+Cukai+Jakarta",
     },
     resepsi: {
       title: "Resepsi",
-      date: "2026-08-01",
+      date: "2027-10-09",
       time: "12:00 - 17:00 WIB",
-      venue: "Gedung Sasana Budaya Ganesha (Sabuga)",
-      address: "Jl. Tamansari No.73, Lb. Siliwangi, Kec. Coblong, Kota Bandung, Jawa Barat 40132",
-      mapsUrl: "https://maps.google.com/?q=Gedung+Sabuga+Bandung",
+      venue: "Auditorium Sabang, Kantor Pusat Bea Cukai",
+      address: "Jl. Jenderal Ahmad Yani By Pass, RT.12/RW.5, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13230",
+      mapsUrl: "https://maps.google.com/?q=Auditorium+Sabang+Kantor+Pusat+Bea+Cukai+Jakarta",
     },
   },
   gift: {
@@ -123,6 +123,6 @@ export const WEDDING_DATA = {
   },
   instagramFilter: "https://www.instagram.com/ar/123456789",
   googleCalendarUrl:
-    "https://www.google.com/calendar/render?action=TEMPLATE&text=Rheina+%26+Dwi+Tomo+Wedding&dates=20260801T020000Z/20260801T100000Z&location=Sabuga+Bandung",
+    "https://www.google.com/calendar/render?action=TEMPLATE&text=Rheina+%26+Dwi+Tomo+Wedding&dates=20271009T020000Z/20271009T100000Z&location=Auditorium+Sabang+Jakarta",
   musicUrl: "",
 };
