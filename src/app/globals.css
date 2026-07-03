@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --color-gold: #c56e18;
+  --color-gold-light: #f3d994;
+  --color-cream: #fdf8ed;
+  --color-dark: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #faf7f2;
+  color: #1a1a1a;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf8ed;
+}
+::-webkit-scrollbar-thumb {
+  background: #c56e18;
+  border-radius: 3px;
+}
+
+/* Section styling */
+.section-padding {
+  @apply px-4 md:px-8 lg:px-16 py-16 md:py-24;
+}
+
+.section-title {
+  @apply font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-4 text-gray-800;
+}
+
+.section-subtitle {
+  @apply font-script text-2xl md:text-3xl text-center text-gold-600 mb-8;
+}
+
+/* Decorative divider */
+.divider {
+  @apply w-24 h-0.5 bg-gold-500 mx-auto my-8;
+}
+
+/* Gold button */
+.btn-gold {
+  @apply inline-block px-8 py-3 bg-gold-600 text-white rounded-full font-medium
+         hover:bg-gold-700 transition-all duration-300 transform hover:scale-105
+         shadow-lg shadow-gold-200/50;
+}
+
+.btn-outline {
+  @apply inline-block px-8 py-3 border-2 border-gold-600 text-gold-600 rounded-full font-medium
+         hover:bg-gold-600 hover:text-white transition-all duration-300;
+}
+
+/* Masonry gallery fix */
+.masonry-grid {
+  columns: 2;
+  column-gap: 0.5rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid { columns: 3; }
+}
+@media (min-width: 1024px) {
+  .masonry-grid { columns: 4; }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+/* Parallax */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Fade-in animation for scroll */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Music player pulse */
+.music-pulse {
+  animation: musicPulse 2s ease-in-out infinite;
+}
+@keyframes musicPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197, 110, 24, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(197, 110, 24, 0); }
+}
